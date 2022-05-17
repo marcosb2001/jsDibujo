@@ -11,7 +11,7 @@ let prevX = null
 let prevY = null
 
 //ancho de la linea
-ctx.lineWidth = 4
+ctx.lineWidth = 3
 
 //para q no dibuje solo
 let draw = false
@@ -25,6 +25,16 @@ clrs = Array.from(clrs)
 clrs.forEach(clr => {
     clr.addEventListener('click', () => {
         ctx.strokeStyle = clr.dataset.clr
+    })
+})
+
+//cambiar tamaño de linea
+let selWidth = document.querySelectorAll('.size')
+selWidth = Array.from(selWidth)
+
+selWidth.forEach(sizes => {
+    sizes.addEventListener('click', () => {
+        ctx.lineWidth = sizes.dataset.size
     })
 })
 

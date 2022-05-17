@@ -17,12 +17,30 @@
     transition: opacity .5s;
 }
 
+.nav2{
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .3;
+    transition: opacity .5s;
+}
+
+.nav2:hover{
+    opacity: 1;
+}
+
 .nav:hover{
     opacity: 1;
 }
 
 .clr{
-    height: 30px;
+    height: 40px;
     width: 40px;
     background-color: blue;
     border-radius: 50%;
@@ -63,11 +81,16 @@
 }
 
 button{
-    border: none;
-    outline: none;
-    padding: .6em 1em;
-    border-radius: 3px;
-    background-color: #777777;
+    height: 50px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    border: 3px solid rgb(214,214,214);
+    transition: tranform .5s;
+}
+
+button:hover{
+    transform: scale(1.2);
 }
 
 .save{
