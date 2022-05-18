@@ -1,4 +1,4 @@
-
+/////////////////////////setup////////////////////////////////////////////
 //declarar lienzo
 const canvas = document.getElementById('canvas')
 canvas.height = window.innerHeight
@@ -10,12 +10,16 @@ const ctx = canvas.getContext("2d")
 let prevX = null
 let prevY = null
 
-//ancho de la linea
+//ancho y estilo de la linea
 ctx.lineWidth = 3
+ctx.lineCap = 'round'
 
 //para q no dibuje solo
 let draw = false
 
+/////////////////////////////botones/////////////////////////////////////
+
+///////////Color
 //tomar la clase .clr
 let clrs = document.querySelectorAll('.clr')
 //convertir a array
@@ -28,6 +32,7 @@ clrs.forEach(clr => {
     })
 })
 
+/////////Tamaño
 //cambiar tamaño de linea
 let selWidth = document.querySelectorAll('.size')
 selWidth = Array.from(selWidth)
@@ -35,6 +40,16 @@ selWidth = Array.from(selWidth)
 selWidth.forEach(sizes => {
     sizes.addEventListener('click', () => {
         ctx.lineWidth = sizes.dataset.size
+    })
+})
+
+///////////Estilo
+let selStroke = document.querySelectorAll('.stroke')
+selStroke = Array.from(selStroke)
+
+selStroke.forEach(stroke => {
+    stroke.addEventListener('click', () => {
+        ctx.lineCap = stroke.dataset.stroke
     })
 })
 

@@ -17,12 +17,16 @@
     transition: opacity .5s;
 }
 
+.nav:hover{
+    opacity: 1;
+}
+
 .nav2{
     width: 200px;
     height: 50px;
     position: fixed;
     bottom: 10%;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -35,7 +39,21 @@
     opacity: 1;
 }
 
-.nav:hover{
+.nav3{
+    width: 200px;
+    height: 50px;
+    position: fixed;
+    bottom: 10%;
+    right: 30%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: .3;
+    transition: opacity .5s;
+}
+
+.nav3:hover{
     opacity: 1;
 }
 
